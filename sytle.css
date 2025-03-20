@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/khiara-script');
 
 body {
     margin: 0;
@@ -8,7 +9,7 @@ body {
 }
 
 .logo_home {
-    width: 450px;
+    width: 700px;
     height: auto;
     object-fit: cover;
 }
@@ -59,7 +60,7 @@ header {
         background-image: url('img/Topo-japa-23.jpg');
         background-color: rgba(0, 0, 0, 0.334);
         background-blend-mode: multiply;
-        background-position: center 30%;
+        background-position: center 5%;
         background-size: cover;
         color: white;
         display: flex;
@@ -70,17 +71,22 @@ header {
         padding: 200px;
         text-align: center;
 
-        h3 {
-            font-size: 1.5em;
-
+        img{
+            padding: 20px;
         }
-
         h1 {
-            font-size: 2.5em;
+            font-size: 6em;
+            margin-top: -5px;
+            margin-bottom: 50px;
+            font-family: 'Khiara Script', cursive;
+            font-weight: normal;
+            color: rgba(255, 220, 93, 0.993);
         }
 
         p {
+            margin-top: 50px;
             font-size: 1em;
+            margin-bottom: 25px;
         }
 
         button {
