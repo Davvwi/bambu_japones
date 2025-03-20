@@ -56,7 +56,7 @@ header {
     }
 
     #home {
-        background-image: url(/img/Topo-japa-23.jpg);
+        background-image: url('img/Topo-japa-23.jpg');
         background-color: rgba(0, 0, 0, 0.334);
         background-blend-mode: multiply;
         background-position: center 30%;
@@ -196,7 +196,7 @@ header {
     }
 
     .imagem {
-        background-image: url(/img/background3.png);
+        background-image: url('img/background3.png');
         background-color: rgba(160, 51, 51, 0.608);
         background-blend-mode: multiply;
     }
