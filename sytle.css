@@ -28,6 +28,12 @@ body {
     object-fit: cover;
 }
 
+/* Estilo para o link da logo */
+nav a {
+    display: inline-block;
+    text-decoration: none;
+}
+
 /* Menu hamburger para mobile */
 .menu-toggle {
     display: none;
@@ -206,6 +212,8 @@ header {
     height: 100%;
     object-fit: cover;
     justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #ofertas {
@@ -213,8 +221,23 @@ header {
     display: flex;
     height: 100%;
     color: white;
+    position: relative;
 
-    div {
+    .imagem {
+        background-image: url('img/Barra.jpg');
+        background-color: rgba(160, 51, 51, 0.608);
+        background-blend-mode: multiply;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobrepor {
         z-index: 1;
         display: flex;
         flex-direction: column;
@@ -223,6 +246,8 @@ header {
         text-align: center;
         padding: 50px 20px;
         width: 100%;
+        max-width: 1200px;
+        margin-top: -50px;
 
         img {
             padding: 20px;
@@ -234,14 +259,21 @@ header {
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 4em;
+            margin-bottom: 30px;
+            font-family: 'Khiara Script', cursive;
+            font-weight: normal;
+            color: rgba(255, 220, 93, 0.993);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         p {
             font-size: 1em;
             width: 50%;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         button {
@@ -257,13 +289,6 @@ header {
         button:hover {
             background-color: rgb(224, 61, 61);
         }
-    }
-
-    .imagem {
-        background-image: url('img/Barra.jpg');
-        background-color: rgba(160, 51, 51, 0.608);
-        background-blend-mode: multiply;
-        width: 100%;
     }
 }
 
@@ -291,6 +316,8 @@ header {
         height: 400px;
         object-fit: cover;
         flex: 1;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -343,7 +370,7 @@ header {
     color: rgba(255, 220, 93, 0.993);
 }
 
-/* Media Queries para responsividade */
+/* Responsividade */
 @media (max-width: 1200px) {
     .logo_home {
         width: 300px;
@@ -377,8 +404,20 @@ header {
         height: 300px;
     }
 
-    #ofertas div p {
+    #ofertas .sobrepor {
+        margin-top: -40px;
+    }
+
+    #ofertas .sobrepor p {
         width: 70%;
+    }
+
+    #ofertas .sobrepor h1 {
+        font-size: 3.5em;
+    }
+
+    #ofertas .imagem {
+        min-height: 450px;
     }
 }
 
@@ -394,6 +433,18 @@ header {
     .format, .full-image {
         padding: 20px;
     }
+
+    #ofertas .sobrepor {
+        margin-top: -30px;
+    }
+
+    #ofertas .sobrepor h1 {
+        font-size: 3em;
+    }
+
+    #ofertas .imagem {
+        min-height: 400px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -406,6 +457,10 @@ header {
         padding: 15px;
     }
 
+    header #nav .logo {
+        width: 140px;
+    }
+    
     header #nav #menu {
         position: fixed;
         top: 0;
@@ -430,11 +485,16 @@ header {
     }
 
     .logo_home {
-        width: 200px;
+        width: 280px;
     }
 
     .logo {
-        width: 100px;
+        width: 140px;
+    }
+    
+    .format .logo {
+        width: 140px;
+        margin-bottom: 15px;
     }
 
     header #home {
@@ -457,12 +517,30 @@ header {
         padding: 6px 12px;
     }
 
+    .full-image {
+        padding: 15px;
+    }
+    
     .full-image img {
-        height: 200px;
+        height: 300px;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
-    #ofertas div p {
+    #ofertas .sobrepor {
+        margin-top: -20px;
+    }
+
+    #ofertas .sobrepor p {
         width: 90%;
+    }
+
+    #ofertas .sobrepor h1 {
+        font-size: 2.5em;
+    }
+
+    #ofertas .imagem {
+        min-height: 350px;
     }
 
     .row {
@@ -475,11 +553,14 @@ header {
 
     .more-images {
         flex-direction: column;
+        align-items: center;
     }
 
     .more-images .imgs {
         width: 100%;
-        height: 200px;
+        height: 250px;
+        max-width: 500px;
+        margin-bottom: 15px;
     }
 
     .footer {
@@ -499,11 +580,24 @@ header {
 
 @media (max-width: 480px) {
     .logo_home {
-        width: 150px;
+        width: 220px;
     }
 
     .logo {
-        width: 80px;
+        width: 120px;
+    }
+    
+    .format .logo {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    header #nav {
+        padding: 10px 15px;
+    }
+
+    header #nav .logo {
+        width: 120px;
     }
 
     header #home {
@@ -534,21 +628,32 @@ header {
         font-size: 0.9em;
     }
 
+    .full-image {
+        padding: 10px;
+    }
+    
     .full-image img {
-        height: 150px;
+        height: 200px;
+        max-width: 350px;
+        margin: 0 auto;
     }
 
-    #ofertas div {
+    #ofertas .sobrepor {
+        margin-top: -10px;
         padding: 30px 15px;
     }
 
-    #ofertas div h1 {
-        font-size: 1.8em;
+    #ofertas .sobrepor h1 {
+        font-size: 2em;
     }
 
-    #ofertas div p {
+    #ofertas .sobrepor p {
         width: 100%;
         font-size: 0.9em;
+    }
+
+    #ofertas .imagem {
+        min-height: 300px;
     }
 
     .more-images {
@@ -556,11 +661,14 @@ header {
         width: 100%;
         padding: 0 15px;
         gap: 15px;
+        align-items: center;
     }
 
     .more-images .imgs {
         width: 100%;
-        height: 150px;
+        height: 200px;
+        max-width: 350px;
+        object-fit: cover;
     }
 
     #contato {
